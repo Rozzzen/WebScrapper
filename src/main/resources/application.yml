@@ -1,0 +1,23 @@
+website:
+  #  url: https://www.eurointegration.com.ua/archives/date_30072024/
+  url: https://www.eurointegration.com.ua/news/
+
+spring:
+  datasource:
+#    hikari:
+#      max-lifetime: 1200000  # 20 minutes
+#      idle-timeout: 300000  # 5 minutes
+#      connection-timeout: 30000
+    url: jdbc:mysql://localhost:3306/mysqldb?allowPublicKeyRetrieval=true&useSSL=false
+    username: user
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
